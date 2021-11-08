@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>vasu</h1>
+    <input type="text"id='demo'placeholder=enter>
+    <input type="text"id='demo1'placeholder=enter>
+    <button type="button" onclick="myfunction()"value="mul">clickme</button>
+    <p id='demo2'></p>
+    <!--nxt-->
+    <input type="text"id='demo3'placeholder=enterage value="18">
+    <button type="button"onclick="check()"value='write'>clickme</button>
+    <script>
+        function myfunction(){
+         let num1=document.getElementById('demo').value;
+         let num2=document.getElementById('demo1').value;
+          document.getElementById('demo2').innerHTML=num1*num2;
+        }
+        function check(){
+            let votable;
+            let age=Number(document.getElementById('demo3').value);
+           
+            if(isNaN(age)){
+                votable="it is not a number";
+            }else{
+                votable=(age<18)? "its not enough your age to vote":"yes you can ";
+            }
+            
+            document.getElementById('demo2').innerHTML=votable;
+        }
+      
+    </script>
+</body>
+</html>
